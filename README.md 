@@ -1,0 +1,26 @@
+# LinuxOps - Linux Server Monitoring & DevOps Automation
+
+## Overview
+LinuxOps is a hands-on DevOps project that automates Linux
+system monitoring, log analysis, and server administration.
+
+## Technologies
+- Ubuntu Linux
+- Bash scripting
+- Git and GitHub
+- Ansible
+- GitHub Actions
+
+## Planned Features
+- System health monitoring
+- CPU, memory, and disk checks
+- Application log analysis
+- Automated health reports
+- Ansible-based configuration management
+- CI/CD using GitHub Actions
+
+## Environment
+Ubuntu running on Windows Subsystem for Linux (WSL).
+
+## Project Status
+Initial setup in progress.
