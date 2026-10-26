@@ -1,26 +1,153 @@
-# LinuxOps - Linux Server Monitoring & DevOps Automation
+# LinuxOps — Linux Server Monitoring & DevOps Automation
 
 ## Overview
-LinuxOps is a hands-on DevOps project that automates Linux
-system monitoring, log analysis, and server administration.
+
+LinuxOps is a hands-on DevOps portfolio project that automates Linux system health monitoring, application log analysis, scheduled execution, and basic project validation.
+
+The project demonstrates practical Linux administration, Bash scripting, task scheduling, CI automation, and configuration management using Ansible.
+
+## Features
+
+- **System Health Monitoring:** Collects system uptime, memory usage, disk usage, and top processes.
+- **Configurable Thresholds:** Uses a configuration file to define disk and memory usage limits.
+- **Application Log Analysis:** Counts errors, warnings, and informational messages in application logs.
+- **Automated Reports:** Generates timestamped monitoring and analysis reports.
+- **Combined Monitoring Workflow:** Runs health checks and log analysis through a single script.
+- **Cron Scheduling:** Runs the monitoring workflow automatically at scheduled intervals.
+- **Shell Script Validation:** Uses ShellCheck and Bash syntax checks to identify script issues.
+- **GitHub Actions CI:** Automatically validates shell scripts when changes are pushed or pull requests are opened.
+- **Ansible Validation:** Checks that required scripts exist and ensures they have executable permissions.
 
 ## Technologies
-- Ubuntu Linux
-- Bash scripting
+
+- Ubuntu Linux on Windows Subsystem for Linux (WSL)
+- Bash
+- Linux commands and utilities
+- Cron
 - Git and GitHub
-- Ansible
+- ShellCheck
 - GitHub Actions
+- Ansible
 
-## Planned Features
-- System health monitoring
-- CPU, memory, and disk checks
-- Application log analysis
-- Automated health reports
-- Ansible-based configuration management
-- CI/CD using GitHub Actions
+## Project Structure
 
-## Environment
-Ubuntu running on Windows Subsystem for Linux (WSL).
+```text
+linuxops/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── ansible/
+│   └── check_linuxops.yml
+├── config/
+│   └── thresholds.conf
+├── docs/
+├── logs/
+├── reports/
+├── scripts/
+│   ├── health_check.sh
+│   ├── log_analyzer.sh
+│   └── run_all.sh
+├── tests/
+├── .gitignore
+└── README.md
+```
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sagarParmonor/LinuxOps.git
+cd LinuxOps
+```
+
+### 2. Configure monitoring thresholds
+
+Edit the configuration file:
+
+```bash
+nano config/thresholds.conf
+```
+
+Example configuration:
+
+```bash
+DISK_THRESHOLD=80
+MEMORY_THRESHOLD=85
+```
+
+These values represent the disk and memory usage percentages at which warnings should be triggered.
+
+### 3. Run the system health check
+
+```bash
+bash scripts/health_check.sh
+```
+
+### 4. Analyze application logs
+
+Create or update the sample application log at `logs/app.log`, then run:
+
+```bash
+bash scripts/log_analyzer.sh
+```
+
+### 5. Run the complete monitoring workflow
+
+```bash
+bash scripts/run_all.sh
+```
+
+Generated reports and monitoring logs are saved in the project's `reports/` and `logs/` directories.
+
+## Automated Execution
+
+The project uses Cron to schedule the monitoring workflow. For example, a job that runs every five minutes can be configured with:
+
+```cron
+*/5 * * * * /bin/bash /home/dell/linuxops/scripts/run_all.sh >> /home/dell/linuxops/logs/cron.log 2>&1
+```
+
+Update the paths if the repository is installed in a different location.
+
+## Continuous Integration
+
+The GitHub Actions workflow performs:
+
+1. Bash syntax validation.
+2. ShellCheck linting of shell scripts.
+
+The workflow runs on pushes and pull requests.
+
+## Ansible Validation
+
+Run the local validation playbook with:
+
+```bash
+ansible-playbook ansible/check_linuxops.yml
+```
+
+The playbook verifies the required monitoring scripts and ensures their permissions are set to executable.
+
+## Learning Objectives
+
+This project provides practical experience with:
+
+- Linux file and directory management.
+- Bash scripting, variables, conditions, and exit codes.
+- System monitoring and log analysis.
+- Cron-based task scheduling.
+- Git version control and GitHub collaboration workflows.
+- Automated shell script validation.
+- Ansible playbooks and idempotent configuration tasks.
+- Continuous integration with GitHub Actions.
 
 ## Project Status
-Initial setup in progress.
+
+Core monitoring scripts, Cron scheduling, GitHub Actions validation, and Ansible project validation have been implemented and tested in the Ubuntu WSL environment.
+
+## Future Improvements
+
+- Expand automated tests for monitoring scripts.
+- Add clearer operational documentation and troubleshooting guidance.
+- Test the project on a standalone Linux virtual machine or server.
