@@ -1,0 +1,11 @@
+===== LinuxOps Log Analysis =====
+Generated: Mon Oct 26 14:20:24 UTC 2026
+Log file: logs/app.log
+Total lines: 4
+Errors: 2
+Warnings: 1
+Info messages: 1
+
+===== Error Details =====
+ERROR: Database connection failed
+ERROR: Database connection failed
