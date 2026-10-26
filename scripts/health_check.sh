@@ -12,7 +12,7 @@ if [[ ! -r "$CONFIG_FILE" ]]; then
     exit 2
 fi
 
-# shellcheck source=../config/thresholds.conf
+# shellcheck disable=SC1090
 source "$CONFIG_FILE"
 
 # Validate configuration values
