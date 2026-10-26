@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # LinuxOps - System Health Check
@@ -13,6 +12,7 @@ if [[ ! -r "$CONFIG_FILE" ]]; then
     exit 2
 fi
 
+# shellcheck source=../config/thresholds.conf
 source "$CONFIG_FILE"
 
 # Validate configuration values

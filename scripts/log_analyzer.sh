@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # LinuxOps - Application Log Analyzer

@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # LinuxOps - Master Monitoring Script
