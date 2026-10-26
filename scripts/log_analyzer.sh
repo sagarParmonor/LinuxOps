@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$HOME/linuxops" || exit 2
+
 # LinuxOps - Application Log Analyzer
 
 LOG_FILE="logs/app.log"
