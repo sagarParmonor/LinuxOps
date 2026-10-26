@@ -1,0 +1,26 @@
+==================================
+       LINUXOPS HEALTH REPORT
+==================================
+Date: Sun Oct 25 16:14:32 UTC 2026
+Hostname: DESKTOP-TRTOLSU
+
+----- UPTIME -----
+ 16:14:32 up  2:07,  1 user,  load average: 0.05, 0.03, 0.00
+
+----- MEMORY USAGE -----
+               total        used        free      shared  buff/cache   available
+Mem:           3.5Gi       428Mi       2.9Gi       3.6Mi       280Mi       3.1Gi
+Swap:          1.0Gi          0B       1.0Gi
+
+----- DISK USAGE -----
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  1.6G  955G   1% /
+
+----- TOP PROCESSES -----
+    PID COMMAND         %CPU %MEM
+   1691 bash            20.0  0.1
+   1619 wsl-pro-service  0.0  0.4
+     95 systemd-udevd    0.0  0.3
+      1 systemd          0.0  0.4
+    382 bash             0.0  0.1
+

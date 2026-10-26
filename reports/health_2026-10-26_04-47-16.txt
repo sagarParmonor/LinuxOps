@@ -1,0 +1,32 @@
+==================================
+       LINUXOPS HEALTH REPORT
+==================================
+Date: Mon Oct 26 04:47:16 UTC 2026
+Hostname: DESKTOP-TRTOLSU
+
+----- SYSTEM UPTIME -----
+ 04:47:16 up 23 min,  1 user,  load average: 0.00, 0.02, 0.00
+
+----- MEMORY -----
+               total        used        free      shared  buff/cache   available
+Mem:           3.5Gi       421Mi       3.0Gi       3.5Mi       196Mi       3.1Gi
+Swap:          1.0Gi          0B       1.0Gi
+Memory usage: 11%
+Memory status: WARNING
+
+----- DISK -----
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  1.6G  955G   1% /
+Root disk usage: 1%
+Disk status: WARNING
+
+----- TOP PROCESSES -----
+    PID COMMAND         %CPU %MEM
+      1 systemd          0.0  0.4
+     94 systemd-udevd    0.0  0.3
+     47 systemd-journal  0.0  0.4
+    152 networkd-dispat  0.0  0.8
+    321 bash             0.0  0.1
+
+----- OVERALL STATUS -----
+WARNING: One or more thresholds have been reached.
